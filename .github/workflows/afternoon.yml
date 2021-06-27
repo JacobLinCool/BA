@@ -1,0 +1,21 @@
+name: 下午的自動化
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化
+    runs-on: macos-latest
+    steps:
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@v0.2.1
+        with:
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          auto_sign: "true"
+          auto_sign_double: "true"
+          auto_draw: "true"
+          auto_answer_anime: "true"
