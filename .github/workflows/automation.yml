@@ -1,0 +1,19 @@
+name: 手動觸發的自動化
+
+on:
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化
+    runs-on: macos-latest
+    steps:
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@v0.2.2
+        with:
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          auto_sign: "true"
+          auto_sign_double: "true"
+          auto_draw: "true"
+          auto_answer_anime: "true"
