@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@v0.2.2
+        uses: JacobLinCool/Bahamut-Automation@main
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}

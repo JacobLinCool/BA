@@ -2,8 +2,7 @@ name: 下午的自動化
 
 on:
   schedule:
-    - cron: "0 5 * * *"
-  workflow_dispatch:
+    - cron: "30 4 * * *"
 
 jobs:
   automation:
@@ -11,7 +10,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@v0.2.2
+        uses: JacobLinCool/Bahamut-Automation@main
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
