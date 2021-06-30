@@ -17,3 +17,4 @@ jobs:
           auto_sign_double: "true"
           auto_draw: "true"
           auto_answer_anime: "true"
+          gh_pat: ${{ secrets.GH_TOKEN }}
