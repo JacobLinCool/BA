@@ -11,10 +11,5 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@main
         with:
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          auto_sign: "true"
-          auto_sign_double: "true"
-          auto_draw: "true"
-          auto_answer_anime: "true"
-          gh_pat: ${{ secrets.GH_TOKEN }}
+          modules: "login,ad_handler,sign,report,answer,report,lottery,report,logout,report"
+          parameters: ${{ secrets.parameters }}
