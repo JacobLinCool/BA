@@ -12,5 +12,5 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@main
         with:
-          modules: "login,ad_handler,sign,report,answer,report,lottery,report,logout,report"
+          modules: "login,ad_handler,sign,report,answer,report,lottery,report,logout,report,telegram"
           parameters: ${{ secrets.parameters }}
