@@ -1,0 +1,15 @@
+name: 手動觸發的自動化 Latest
+
+on:
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化
+    runs-on: macos-latest
+    steps:
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@latest
+        with:
+          modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
+          parameters: ${{ secrets.parameters }}
