@@ -12,11 +12,5 @@ jobs:
         uses: JacobLinCool/Bahamut-Automation@main
         with:
           modules: "login,sayloud,build,logout"
-          parameters: >
-          {
-            "build": [
-              {"bsn": "60111", "snA": "120671", "content": "[url=https://www.google.com/]TEST[/url]"}
-            ],
-            "sayloud": [{ "to": "All Users", "text": "https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182&page=3&gothis=76820646" }]
-          }
+          parameters: '{"build": [{"bsn": "60111", "snA": "120671", "content": "[url=https://www.google.com/]TEST[/url]"}], "sayloud": [{ "to": "All Users", "text": "https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182&page=3&gothis=76820646" }]}'
           secrets: ${{ secrets.parameters }}
