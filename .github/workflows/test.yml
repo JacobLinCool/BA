@@ -11,12 +11,12 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@main
         with:
-          modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
+          modules: "login,sayloud,build,logout"
           parameters: >
           {
             "build": [
               {"bsn": "60111", "snA": "120671", "content": "[url=https://www.google.com/]TEST[/url]"}
             ],
-            "sayload": [{ "to": "All Users", "text": "https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182&page=3&gothis=76820646" }]
+            "sayloud": [{ "to": "All Users", "text": "https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182&page=3&gothis=76820646" }]
           }
           secrets: ${{ secrets.parameters }}
