@@ -1,0 +1,22 @@
+name: 測試的自動化
+
+on:
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化
+    runs-on: macos-latest
+    steps:
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@main
+        with:
+          modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
+          parameters: >
+          {
+            "build": [
+              {"bsn": "60111", "snA": "120671", "content": "[url=https://www.google.com/]TEST[/url]"}
+            ],
+            "sayload": [{ "to": "All Users", "text": "https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182&page=3&gothis=76820646" }]
+          }
+          secrets: ${{ secrets.parameters }}
