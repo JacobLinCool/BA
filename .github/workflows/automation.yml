@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@main
+        uses: JacobLinCool/Bahamut-Automation@action
         with:
           modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
           parameters: ${{ secrets.parameters }}
