@@ -2,7 +2,7 @@ name: 午夜的自動化
 
 on:
   schedule:
-    - cron: "30 16 * * *"
+    - cron: ${{ secrets.cron || "30 16 * * *" }}
 
 jobs:
   automation:
