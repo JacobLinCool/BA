@@ -9,8 +9,10 @@ jobs:
     name: 自動化
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
           modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
           parameters: ${{ secrets.parameters }}
+      - uses: gautamkrishnar/keepalive-workflow@master
