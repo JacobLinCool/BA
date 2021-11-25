@@ -14,5 +14,4 @@ jobs:
         with:
           modules: "report,ad_handler,login,sign,guild,answer,lottery,sayloud,builder,logout,report,telegram,discord,line_notify,issue"
           secrets: ${{ secrets.SECRETS }}
-          browser: '{ "type": "webkit" }'
       - uses: gautamkrishnar/keepalive-workflow@master
