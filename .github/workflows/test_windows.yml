@@ -1,16 +1,16 @@
-name: 手動觸發的自動化 MacOS
+name: 自動化測試 Windows
 
 on:
   workflow_dispatch:
 
 jobs:
   automation:
-    name: 自動化
-    runs-on: macos-latest
+    name: 自動化 Windows
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
-          modules: "report,ad_handler,login,sign,guild,answer,lottery_plus,logout,report,telegram,discord,line_notify,issue"
+          modules: "report,ad_handler,login,sign,logout"
           secrets: ${{ secrets.SECRETS }}
