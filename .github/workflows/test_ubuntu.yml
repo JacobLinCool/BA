@@ -1,0 +1,16 @@
+name: 自動化測試 Ubuntu
+
+on:
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@1.0.0-pre.3
+        with:
+          modules: "report,ad_handler,login,sign,guild,answer,lottery,logout"
+          secrets: ${{ secrets.SECRETS }}
