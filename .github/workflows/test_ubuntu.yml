@@ -12,7 +12,7 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
-          modules: "report,ad_handler"
+          modules: "report,ad_handler,test"
           secrets: ${{ secrets.SECRETS }}
           browser: '{ "type": "firefox" }'
 
@@ -24,7 +24,7 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
-          modules: "report,ad_handler"
+          modules: "report,ad_handler,test"
           secrets: ${{ secrets.SECRETS }}
           browser: '{ "type": "chromium" }'
 
@@ -36,6 +36,6 @@ jobs:
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
-          modules: "report,ad_handler"
+          modules: "report,ad_handler,test"
           secrets: ${{ secrets.SECRETS }}
           browser: '{ "type": "webkit" }'
