@@ -1,16 +1,41 @@
-name: 自動化測試 Windows
+name: 測試 Windows
 
 on:
   workflow_dispatch:
 
 jobs:
-  automation:
-    name: 自動化 Windows
+  test_firefox:
+    name: Firefox
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
         uses: JacobLinCool/Bahamut-Automation@action
         with:
-          modules: "report,ad_handler,login,sign,logout"
+          modules: "report,ad_handler"
           secrets: ${{ secrets.SECRETS }}
+          browser: '{ "type": "firefox" }'
+
+  test_chromium:
+    name: Chromium
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@action
+        with:
+          modules: "report,ad_handler"
+          secrets: ${{ secrets.SECRETS }}
+          browser: '{ "type": "chromium" }'
+
+  test_webkit:
+    name: Webkit
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@action
+        with:
+          modules: "report,ad_handler"
+          secrets: ${{ secrets.SECRETS }}
+          browser: '{ "type": "webkit" }'

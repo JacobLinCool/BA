@@ -1,4 +1,4 @@
-name: 測試 Ubuntu
+name: 測試 MacOS
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 jobs:
   test_firefox:
     name: Firefox
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
@@ -18,7 +18,7 @@ jobs:
 
   test_chromium:
     name: Chromium
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
@@ -30,7 +30,7 @@ jobs:
 
   test_webkit:
     name: Webkit
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation

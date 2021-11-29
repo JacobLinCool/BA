@@ -1,4 +1,4 @@
-name: 手動觸發的自動化 MacOS
+name: 手動觸發的自動化 (MacOS)
 
 on:
   workflow_dispatch:
