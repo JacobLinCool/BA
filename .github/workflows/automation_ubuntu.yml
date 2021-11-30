@@ -1,0 +1,17 @@
+name: 手動觸發的自動化 (Ubuntu)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  automation:
+    name: 自動化
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bahamut Automation
+        uses: JacobLinCool/Bahamut-Automation@action
+        with:
+          modules: "report,ad_handler,login,sign,guild,answer,lottery_plus,logout,report,telegram,discord,line_notify,issue"
+          secrets: ${{ secrets.SECRETS }}
+          parameters: '{ "lottery_max_parallel": 3 }'
