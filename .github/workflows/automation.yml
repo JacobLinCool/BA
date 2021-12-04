@@ -14,3 +14,4 @@ jobs:
         with:
           modules: "report,ad_handler,login,sign,guild,answer,lottery,logout,report,telegram,discord,line_notify,issue"
           secrets: ${{ secrets.SECRETS }}
+          parameters: '{ "lottery_max_parallel": 3 }'
