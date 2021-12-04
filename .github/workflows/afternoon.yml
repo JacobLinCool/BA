@@ -14,5 +14,6 @@ jobs:
         uses: JacobLinCool/Bahamut-Automation@action
         with:
           modules: "report,ad_handler,login,sign,guild,answer,lottery,logout,report,telegram,discord,line_notify,issue"
-          parameters: ${{ secrets.SECRETS }}
+          secrets: ${{ secrets.SECRETS }}
+          parameters: '{ "lottery_max_parallel": 3 }'
       - uses: gautamkrishnar/keepalive-workflow@master
