@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@action
+        uses: JacobLinCool/Bahamut-Automation@1.0.0-pre.4
         with:
           modules: "report,ad_handler,login,sign,guild,answer,lottery,del_mail,logout,report,telegram,discord,line_notify,issue"
           secrets: ${{ secrets.SECRETS }}
