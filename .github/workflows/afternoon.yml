@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@action
+        uses: JacobLinCool/Bahamut-Automation@955fb50215ce7f039f2642136b341db9603e38e1
         with:
           modules: "report,ad_handler,login,sign,guild,answer,lottery,logout,report,telegram,discord,line_notify,issue"
           secrets: ${{ secrets.SECRETS }}
