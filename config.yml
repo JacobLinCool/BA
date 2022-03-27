@@ -31,11 +31,6 @@ modules:
     #     token: line_token
     # issue:
 
-    # 自製模組（範例）
-    # /path/to/module:
-    #     param1: value1
-    #     param2: value2
-
 # 瀏覽器的設定
 browser:
     type: webkit

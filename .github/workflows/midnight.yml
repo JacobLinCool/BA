@@ -1,17 +1,16 @@
 name: 午夜的自動化
 
 on:
-  schedule:
-    - cron: "30 16 * * *"
+    schedule:
+        - cron: "30 16 * * *"
 
 jobs:
-  automation:
-    name: 自動化
-    runs-on: macos-latest
-    steps:
-      - name: Bahamut Automation
-        uses: JacobLinCool/Bahamut-Automation@action
-        with:
-          modules: "login,ad_handler,sign,report,guild,report,answer,report,lottery,report,logout,report,telegram"
-          parameters: '{"builder":[{"bsn":"60076","snA":"6515182","content":"今天是 $year$ 年 $month$ 月 $day$ 日，天氣晴，一切 OK！"},{"bsn":"60111","snA":"120687","content":"$month$月$day$號 測試測試！"}], "sayloud":[{"to":"想要勇造的人","text":"8/21前：https://forum.gamer.com.tw/C.php?bsn=60076&snA=6515182"}]}'
-          secrets: ${{ secrets.parameters }}
+    automation:
+        name: 自動化
+        runs-on: macos-latest
+        steps:
+            - name: Bahamut Automation
+              uses: JacobLinCool/Bahamut-Automation@action
+              with:
+                  config: config.yml
+                  secrets: ${{ secrets.SECRETS }}
