@@ -1,0 +1,50 @@
+---
+# 所有模組皆可存取的共用參數
+shared:
+
+# 使用的模組及其參數，可以是內建的模組或是自製模組的路徑
+modules:
+    # 註冊一些通用函式到 shared
+    report:
+    ad_handler:
+
+    # 主要功能模組
+    login:
+        username: $username
+        password: $password
+    sign:
+    guild:
+    answer:
+    lottery:
+        max_attempts: 20
+        max_parallel: 3
+    del_mail:
+        match: [{ title: "【勇者福利社】成功獲得抽獎資格通知信" }]
+    logout:
+
+    # 以下是寄報告的部分
+    # telegram:
+    #     channel: telegram_channel_id
+    discord:
+        webhook: $discord_webhook
+    # line_notify:
+    #     token: line_token
+    # issue:
+
+    # 自製模組（範例）
+    # /path/to/module:
+    #     param1: value1
+    #     param2: value2
+
+# 瀏覽器的設定
+browser:
+    type: webkit
+    headless: true
+    firefoxUserPrefs:
+        dom.webaudio.enabled: false
+        media.volume_scale: 0
+        media.default_volume: 0
+    # 如果要使用非內建的瀏覽器執行，請設定 executablePath
+    # executablePath: /path/to/browser
+
+    # 更多設定請查閱：https://playwright.dev/docs/api/class-browsertype#browser-type-launch
