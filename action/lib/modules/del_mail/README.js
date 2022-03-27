@@ -1,0 +1,5 @@
+// src/modules/del_mail/README.md
+var README_default = '# \u7AD9\u5167\u4FE1\u522A\u9664\u6A21\u7D44\n\n- Module Name: `del_mail`\n\n## \u53C3\u6578\n\n\u5FC5\u8981\u53C3\u6578\uFF1A `match`\n\n### \u7BC4\u4F8B\n\n```yaml\nmodules:\n    ...\n\n    del_mail:\n        match:\n            - title: "\u3010\u52C7\u8005\u798F\u5229\u793E\u3011\u6210\u529F\u7372\u5F97\u62BD\u734E\u8CC7\u683C\u901A\u77E5\u4FE1"\n            - sender: "someone"\n            - sender: "the other"\n              title: "hello"\n              before: "2021-12-28 12:34:56"\n\n    ...\n```\n\n\u9019\u6A23\u4ED6\u6703\u522A\u9664\u6240\u6709\uFF1A\n\n  1. \u6A19\u984C\u5305\u542B `\u3010\u52C7\u8005\u798F\u5229\u793E\u3011\u6210\u529F\u7372\u5F97\u62BD\u734E\u8CC7\u683C\u901A\u77E5\u4FE1` \u7684\u4FE1\n  2. \u5BC4\u4EF6\u8005\u540D\u7A31\u5305\u542B `someone` \u7684\u4FE1\n  3. \u5BC4\u4EF6\u8005\u540D\u7A31\u5305\u542B `the other` \u4E14\u6A19\u984C\u5305\u542B `hello` \u4E14\u5BC4\u4EF6\u65E5\u671F\u5728 `2021-12-28 12:34:56` \u4E4B\u524D\u7684\u4FE1\n';
+export {
+  README_default as default
+};

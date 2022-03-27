@@ -1,0 +1,89 @@
+{
+    "name": "bahamut-automation",
+    "version": "1.0.0-pre.6",
+    "description": "免費開源的巴哈姆特自動化！",
+    "type": "module",
+    "main": "dist/lib/core/index.js",
+    "types": "dist/lib/core/index.d.ts",
+    "bin": {
+        "ba": "./dist/lib/core/cli.js",
+        "baha": "./dist/lib/core/cli.js"
+    },
+    "files": [
+        "dist/lib",
+        "example"
+    ],
+    "scripts": {
+        "prepare": "",
+        "start": "node ./dist/lib/core/cli.js",
+        "format": "prettier --write \"**/*.{js,ts,json,yml,yaml}\" \"!dist\"",
+        "docs": "typedoc ./src/core/index.ts --tsconfig ./tsconfig/core.json --name 巴哈姆特自動化！ --lightHighlightTheme nord --out ./web/docs",
+        "build": "pnpm build:package -s && pnpm build:action -s && pnpm build:binary -s",
+        "build:package": "esmo --no-warnings scripts/build_package.ts",
+        "build:action": "esmo --no-warnings scripts/build_action.ts",
+        "build:binary": "esmo --no-warnings scripts/build_binary.ts"
+    },
+    "keywords": [
+        "bahamut",
+        "automation"
+    ],
+    "author": {
+        "name": "JacobLinCool",
+        "email": "jacoblincool@gmail.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@actions/core": "^1.6.0",
+        "@actions/github": "^5.0.0",
+        "@jacoblincool/puddle": "^0.1.1",
+        "@octokit/core": "^3.5.1",
+        "@types/html-to-text": "^8.0.1",
+        "commander": "^9.1.0",
+        "countapi-js": "^1.0.2",
+        "html-to-text": "^8.1.0",
+        "js-yaml": "^4.1.0",
+        "markdown-it": "^12.2.0",
+        "node-fetch": "^2.6.6",
+        "otplib": "^12.0.1",
+        "playwright": "^1.19.2",
+        "turndown": "^7.1.1"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+        "@types/js-yaml": "^4.0.5",
+        "@types/markdown-it": "12.2.3",
+        "@types/node": "16.11.12",
+        "@types/node-fetch": "2.5.12",
+        "@types/turndown": "5.0.1",
+        "esno": "^0.14.1",
+        "ora": "5.4.1",
+        "pkg": "5.5.1",
+        "prettier": "2.5.1",
+        "tsup": "^5.11.9",
+        "typedoc": "0.22.10",
+        "typescript": "4.5.2"
+    },
+    "pkg": {
+        "scripts": [
+            "dist/lib/**/*.js"
+        ],
+        "assets": [
+            "package.json"
+        ],
+        "targets": [
+            "node16-macos-x64",
+            "node16-macos-arm64",
+            "node16-linux-x64",
+            "node16-win-x64"
+        ],
+        "outputPath": "dist/binary"
+    },
+    "homepage": "https://github.com/JacobLinCool/bahamut-automation#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JacobLinCool/bahamut-automation.git"
+    },
+    "bugs": {
+        "url": "https://github.com/JacobLinCool/bahamut-automation/issues"
+    }
+}
