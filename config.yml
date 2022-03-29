@@ -23,14 +23,14 @@ modules:
     logout:
 
     # 以下是寄報告的部分
-    # telegram:
-    #     channel: telegram_channel_id
+    telegram:
+        channel: $telegram_id
     discord:
         webhook: $discord_webhook
-    # line_notify:
-    #     token: line_token
+    line_notify:
+        token: $line_token
     issue:
-        pat: $gh_pat
+        pat: $github_token
 
 # 瀏覽器的設定
 browser:
