@@ -29,7 +29,8 @@ modules:
         webhook: $discord_webhook
     # line_notify:
     #     token: line_token
-    # issue:
+    issue:
+        pat: $gh_pat
 
 # 瀏覽器的設定
 browser:
