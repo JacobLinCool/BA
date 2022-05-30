@@ -13,7 +13,7 @@ jobs:
 
             - name: Merge Secrets
               run: node merge.js
-              with:
+              env:
                   config: config.yml
                   secrets: ${{ secrets.SECRETS }}
 
