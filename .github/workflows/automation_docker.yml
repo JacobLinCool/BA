@@ -1,0 +1,21 @@
+name: 手動觸發的自動化 (Docker)
+
+on:
+    workflow_dispatch:
+
+jobs:
+    automation:
+        name: 自動化
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v3
+
+            - name: Merge Secrets
+              run: node merge.js
+              with:
+                  config: config.yml
+                  secrets: ${{ secrets.SECRETS }}
+
+            - name: Bahamut Automation
+              run: docker run --rm -v "$(pwd)/merged-config.yml:/config.yml" jacoblincool/bahamut-automation
