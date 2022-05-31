@@ -7,12 +7,18 @@ on:
 jobs:
     automation:
         name: 自動化
-        runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: gautamkrishnar/keepalive-workflow@master
-            - name: Bahamut Automation
-              uses: JacobLinCool/Bahamut-Automation@action
-              with:
+            - name: Checkout Repository
+              uses: actions/checkout@v3
+
+            - name: Merge Secrets
+              run: node merge.js
+              env:
                   config: config.yml
                   secrets: ${{ secrets.SECRETS }}
+
+            - name: Bahamut Automation
+              run: docker run --rm -v "$(pwd)/merged-config.yml:/config.yml" jacoblincool/bahamut-automation
+
+            - uses: gautamkrishnar/keepalive-workflow@master
